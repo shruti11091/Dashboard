@@ -1,9 +1,9 @@
 import React from "react";
-import "./Footer.css"; // Make sure to create this CSS file
+import "./Footer.css"; // Ensure you have this file
 
-const Footer = ({ isAtBottom }) => {
+const Footer = () => {
   return (
-    <footer className={`footer ${isAtBottom ? "visible" : ""}`}>
+    <footer className="footer">
       <p>© 2025 My Website</p>
     </footer>
   );

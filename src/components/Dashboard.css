@@ -115,10 +115,25 @@ body {
     padding-right: 10px;
   }
 
-  .chart-card {
+  /* .chart-card {
     max-width: 100%;
     margin: 15px 0; /* Adjust margins for spacing */
+  } */
+  .chart-card {
+    background-color: #2d3748;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+    position: relative;
+    z-index: 1; /* Ensure the card is above others */
   }
+  
+  .chart-card:hover {
+    transform: scale(1.1); /* Enlarges the card by 10% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow when hovered */
+    z-index: 2; /* Ensure the hovered card is above others */
+  }
+  
 
   .dark {
     background-color: #121212;
@@ -130,5 +145,27 @@ body {
     color: white;
   }
   
+/* Style the container for the download button */
+.download-buttons {
+  display: flex;
+  justify-content: center;  /* Centers content horizontally */
+  margin-top: 5px;         /* Add top margin to move it down a little */
+  margin-bottom: 5px;  
+  margin-left: 5%;        /* Add bottom margin */
 }
 
+/* Style the button itself */
+.download-button {
+  padding: 10px 20px;       /* Padding for the button */
+  font-size: 16px;          /* Increase font size */
+  background-color: #4CAF50; /* Green background */
+  color: white;             /* White text */
+  border: none;             /* No border */
+  border-radius: 5px;       /* Rounded corners */
+  cursor: pointer;          /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background-color transition */
+}
+
+.download-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}

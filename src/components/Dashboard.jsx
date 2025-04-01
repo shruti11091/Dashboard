@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 import './Dashboard.css';
+import { jsPDF } from "jspdf";
+import Papa from 'papaparse';
+
+
 
 const Dashboard = ({ darkMode }) => {
   const [data, setData] = useState([]);
@@ -58,8 +62,28 @@ const Dashboard = ({ darkMode }) => {
       .catch((err) => console.error('Error loading data:', err));
   }, []);
 
+  const downloadJSON = () => {
+    const dataToDownload = {
+      severityCounts,
+      ipCounts,
+      timeSeries,
+      portCounts,
+      categoryCounts,
+      ipTimeSeries
+    };
+    const blob = new Blob([JSON.stringify(dataToDownload, null, 2)], { type: 'application/json' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'dashboard_data.json';
+    link.click();
+  };
+
   return (
     <div className="dashboard">
+      {/* Download Buttons */}
+      <div className="download-buttons">
+        <button onClick={downloadJSON} className="download-button">Download Data</button>
+      </div>
       <div className="grid-container">
         {/* Alerts by Severity */}
         <div className="chart-card">
