@@ -1,0 +1,36 @@
+.footer {
+    background-color: #1e1e1e;
+    color: white;
+    height: 60px; /* Fixed height */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-link {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: #82ca9d;
+  }
+  
+  .footer-small-text {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  

@@ -1,0 +1,134 @@
+/* Ensure full viewport height */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Light and Dark Modes */
+.dark {
+  background-color: #121212;
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color: white;
+}
+
+/* Dashboard container fixes */
+.dashboard-container {
+  padding-top: 100px; /* Ensures space below navbar */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1300px;
+}
+/* 2x2 Grid Layout with equal spacing */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 1fr)); /* Keeps 2 cards per row */
+  gap: 30px; /* Space between cards */
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+  padding-left: 150px; /* Increased padding to shift more to the right */
+  padding-right: 150px; /* Increased padding on the right */
+}
+
+/* Centered Chart Cards */
+.chart-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 500px; /* Set the max width for each card */
+  text-align: center;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  background-color: #ff7300;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #d500f9;
+}
+@media (max-width: 1458px) {
+  .dark {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .light {
+    background-color: white;
+    color: white;
+  }
+  
+}
+@media (max-width: 1291px) {
+  .dark {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .light {
+    background-color: white;
+    color: white;
+  }
+  
+}
+/* Responsive Layout */
+@media (max-width: 838px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Stacks on smaller screens */
+    padding-left: 20px; /* Reduced padding */
+    padding-right: 20px; /* Reduced padding */
+  }
+
+  .chart-card {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  /* Ensure full width on smaller screens */
+  .grid-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .chart-card {
+    max-width: 100%;
+    margin: 15px 0; /* Adjust margins for spacing */
+  }
+
+  .dark {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .light {
+    background-color: white;
+    color: white;
+  }
+  
+}
+
