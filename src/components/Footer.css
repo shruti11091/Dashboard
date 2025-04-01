@@ -10,7 +10,7 @@
   left: 0;
   height:40px;
   /* Ensures it's above expanding cards */
-  z-index: 10; /* Hi
+  z-index: 10; /* Hi*/
 }
 
 /* To ensure content takes full height and pushes footer to bottom */
